@@ -1,0 +1,163 @@
+@import "../Mixins/Mixins";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.modal{
+    width: 100%;
+    min-height: 1193px;
+    background: rgba(0, 0, 0, 0.9);
+    @include flexCenter();
+    position: absolute;
+    .modalMain{
+        width: 301px;
+        height: 360px;
+        background: #FFFFFF;
+        border-radius: 5px;
+        @include flDownAround();
+        .header{
+            width: 259px;
+            height: 32px;
+            @include flexBetween();
+            p{
+                font-family: 'Montserrat', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                text-transform: capitalize;
+                color: #2E2E2E;
+            }
+            button{
+                width: 16px;
+                height: 16px;
+                @include flexCenter();
+                background: #FFFFFF;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                svg{
+                    width: 16px;
+                    height: 16px;
+                    color: gray;
+                    transition: all ease-in-out;
+                    &:hover{
+                        color: red;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        .gender{
+            width: 259px;
+            height: 32px;
+            @include flexBetween();
+            a{
+                width: 125px;
+                height: 32px;
+                @include flexCenter();
+                background: #FFFFFF;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+                text-decoration: none;
+                border-radius: 5px;
+                cursor: pointer;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    color: #0008C1;
+                }
+                &:nth-child(2){
+                    svg{
+                        color: hotpink;
+                    }
+                }
+            }
+            a.active{
+                border: 2px solid #939393;
+            }
+        }
+        .cat{
+            width: 259px;
+            height: 25px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            border-bottom: 1px solid #C1C1C1;
+            position: relative;
+            input{
+                width: 259px;
+                height: 24px;
+                font-family: 'Roboto', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                text-transform: capitalize;
+                color: #4F4F4F;
+                outline: none;
+                border: none;
+            }
+            span{
+                position: absolute;
+                color: red;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 10px;
+                font-weight: bolder;
+                bottom: -15px;
+            }
+        }
+        .upload{
+            width: 261px;
+            height: 145px;
+            background: #D3D3D3;
+            border-radius: 5px;
+            @include flDownEvenly();
+            position: relative;
+            img{
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                font-size: 60px;
+            }
+            p{
+                width: 100px;
+                height: 40px;
+                font-family: 'Montserrat', sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                text-align: center;
+                text-transform: capitalize;
+
+                color: #FFFFFF;
+            }
+            .file{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+            span{
+                position: absolute;
+                color: red;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 10px;
+                font-weight: bolder;
+                bottom: -15px;
+            }
+        }
+        .add{
+            width: 259px;
+            height: 32px;
+            background: #0008C1;
+            border-radius: 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: capitalize;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+    }
+}

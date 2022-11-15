@@ -1,0 +1,7 @@
+@import "../Mixins/Mixins";
+.main{
+    width: 100%;
+    min-height: 1193px;
+    background-color: #E5E5E5;
+    @include flDownBetween();
+}

@@ -1,0 +1,16 @@
+@import "../Mixins/Mixins";
+
+.header{
+    width: 1366px - 126px;
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .main{
+        width: 100%;
+        height: 140px;
+        @include flexBetween();
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+}
